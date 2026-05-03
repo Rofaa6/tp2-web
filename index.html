@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Générateur Sécurisé</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+</head>
+<body>
+
+  <div class="card">
+    <h1><i class="fas fa-shield-alt"></i> Générateur Sécurisé</h1>
+    <div class="result-box">
+      <span id="result">Cliquez sur Générer</span>
+      <button id="copy-btn" title="Copier">
+        <i class="fas fa-copy"></i> Copier
+      </button>
+    </div>
+    <div class="strength-bar-container">
+      <div id="strength-bar"></div>
+    </div>
+    <p id="strength-label">--</p>
+
+    <div class="config">
+      <div class="length-control">
+        <label for="length">Longueur : <span id="length-display">12</span></label>
+        <input type="range" id="length" min="4" max="32" value="12" />
+      </div>
+
+      <div class="checkboxes">
+        <label>
+          <input type="checkbox" id="uppercase" checked />
+          Lettres majuscules (A-Z)
+        </label>
+        <label>
+          <input type="checkbox" id="lowercase" checked />
+          Lettres minuscules (a-z)
+        </label>
+        <label>
+          <input type="checkbox" id="numbers" checked />
+          Chiffres (0-9)
+        </label>
+        <label>
+          <input type="checkbox" id="symbols" />
+          Symboles (!@#$...)
+        </label>
+      </div>
+
+      <button id="generate-btn">
+        <i class="fas fa-key"></i> Générer
+      </button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
